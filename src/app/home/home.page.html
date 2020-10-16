@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let home of homes" [routerLink]="['./', home.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="home.imageUrl">
+
+        </ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{home.title}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
